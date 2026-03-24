@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高阶应用学习路径 - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #0F172A 0%, #7C3AED 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .path-detail { padding: 2rem 0 4rem; }
+        .overview-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .overview-card h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1rem; }
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .stat-item { background: #F5F3FF; border-radius: 10px; padding: 1rem; text-align: center; }
+        .stat-item i { font-size: 1.5rem; color: #7C3AED; margin-bottom: 0.4rem; display: block; }
+        .stat-item .label { font-size: 0.78rem; color: #6B7280; }
+        .stat-item .value { font-weight: 700; color: #1F2937; font-size: 0.95rem; }
+        .phase-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 1.5rem; overflow: hidden; }
+        .phase-header { padding: 1.25rem 1.75rem; color: white; display: flex; align-items: center; gap: 0.75rem; }
+        .phase-header h3 { font-size: 1.1rem; }
+        .phase-header p { opacity: 0.85; font-size: 0.9rem; }
+        .phase-body { padding: 1.5rem 1.75rem; }
+        .step-list { list-style: none; }
+        .step-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid #F3F4F6; }
+        .step-item:last-child { border-bottom: none; }
+        .step-num { background: #7C3AED; color: white; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; flex-shrink: 0; font-weight: 600; }
+        .step-info h4 { font-size: 0.93rem; color: #1F2937; margin-bottom: 0.15rem; }
+        .step-info p { font-size: 0.83rem; color: #6B7280; }
+        .tip-box { background: #F5F3FF; border: 1px solid #DDD6FE; border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1rem; font-size: 0.9rem; color: #4C1D95; }
+        .phase1 { background: linear-gradient(135deg, #0F172A, #1E3A5F); }
+        .phase2 { background: linear-gradient(135deg, #7C3AED, #EC4899); }
+        .phase3 { background: linear-gradient(135deg, #B45309, #D97706); }
+        .milestone-box { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .milestone-box h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1.5rem; }
+        .milestone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .milestone-item { border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.25rem; text-align: center; transition: border-color 0.3s; }
+        .milestone-item:hover { border-color: #7C3AED; }
+        .milestone-item i { font-size: 2rem; color: #7C3AED; margin-bottom: 0.5rem; display: block; }
+        .milestone-item h4 { font-size: 0.9rem; color: #1F2937; margin-bottom: 0.3rem; }
+        .milestone-item p { font-size: 0.8rem; color: #6B7280; }
+        .finish-box { background: linear-gradient(135deg, #0F172A, #7C3AED); color: white; border-radius: 16px; padding: 2.5rem; text-align: center; margin-top: 2rem; }
+        .finish-box h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        .finish-box p { opacity: 0.9; margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .btn-white { background: white; color: #7C3AED; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 0.4rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#learning">学习路径</a></li>
+                <li><a href="../index.html#courses">课程资源</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.5rem; opacity:0.8; font-size:0.9rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a> / <a href="../index.html#learning" style="color:rgba(255,255,255,0.8);text-decoration:none;">学习路径</a> / <span>高阶应用</span>
+            </div>
+            <h1><i class="fas fa-trophy"></i> 高阶应用学习路径</h1>
+            <p>03-高阶应用 · 多模态、业务落地、智能体架构设计</p>
+        </div>
+    </div>
+
+    <div class="path-detail">
+        <div class="container">
+            <div class="overview-card">
+                <h2><i class="fas fa-map" style="color:#7C3AED;"></i> 路径概览</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div class="label">适合人群</div>
+                        <div class="value">想深度应用</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="label">建议周期</div>
+                        <div class="value">8-10 周</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-signal"></i>
+                        <div class="label">难度</div>
+                        <div class="value">⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-crown"></i>
+                        <div class="label">目标</div>
+                        <div class="value">架构 & 落地</div>
+                    </div>
+                </div>
+                <p style="color:#374151;">完成本路径后，你将能够主导复杂 AI 系统的架构设计，推动业务场景 AI 落地，成为团队 AI 技术专家。</p>
+            </div>
+
+            <!-- 阶段一 -->
+            <div class="phase-card">
+                <div class="phase-header phase1">
+                    <i class="fas fa-image" style="font-size:1.4rem;"></i>
+                    <div>
+                        <h3>阶段一：多模态大模型应用（第 1-3 周）</h3>
+                        <p>掌握图像、视频、音频等多模态 AI 能力</p>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <div class="step-num">1</div>
+                            <div class="step-info"><h4>多模态大模型原理</h4><p>理解视觉编码器、跨模态对齐、多模态推理机制</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">2</div>
+                            <div class="step-info"><h4>学习视频举证判证案例</h4><p>章程老师的多模态落地实践，学习完整的技术方案</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">3</div>
+                            <div class="step-info"><h4>多模态能力实战</h4><p>设计一个包含图像理解的业务场景，完成 Prototype</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">4</div>
+                            <div class="step-info"><h4>阅读最新研究报告</h4><p>跟踪 GPT-4o Vision、Gemini 等最新多模态进展</p></div>
+                        </li>
+                    </ul>
+                    <div class="tip-box"><i class="fas fa-lightbulb"></i> 推荐资源：《多模态在电商纠纷判证场景的落地》课程 + 全球研报库</div>
+                </div>
+            </div>
+
+            <!-- 阶段二 -->
+            <div class="phase-card">
+                <div class="phase-header phase2">
+                    <i class="fas fa-building" style="font-size:1.4rem;"></i>
+                    <div>
+                        <h3>阶段二：业务场景落地方法论（第 4-6 周）</h3>
+                        <p>系统掌握 AI 业务落地的完整方法论</p>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <div class="step-num">1</div>
+                            <div class="step-info"><h4>AI 落地框架学习</h4><p>从业务痛点到 AI 解决方案的完整映射方法</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">2</div>
+                            <div class="step-info"><h4>ROI 评估方法</h4><p>如何量化 AI 项目的业务价值，获得资源支持</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">3</div>
+                            <div class="step-info"><h4>风险控制与合规</h4><p>AI 系统的安全性、可靠性和合规性保障</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">4</div>
+                            <div class="step-info"><h4>主导一个落地项目</h4><p>在实际业务中完整走完 AI 落地的全流程</p></div>
+                        </li>
+                    </ul>
+                    <div class="tip-box"><i class="fas fa-lightbulb"></i> 推荐资源：《拥抱全天候数字员工》AI 夜校系列 + AI实战经验案例库</div>
+                </div>
+            </div>
+
+            <!-- 阶段三 -->
+            <div class="phase-card">
+                <div class="phase-header phase3">
+                    <i class="fas fa-drafting-compass" style="font-size:1.4rem;"></i>
+                    <div>
+                        <h3>阶段三：智能体架构设计（第 7-10 周）</h3>
+                        <p>设计复杂的多 Agent 系统架构</p>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <div class="step-num">1</div>
+                            <div class="step-info"><h4>多 Agent 系统设计原则</h4><p>分工协作、状态管理、错误恢复的架构模式</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">2</div>
+                            <div class="step-info"><h4>企业级 AI 系统架构</h4><p>高可用、可扩展的生产级 AI 系统设计</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">3</div>
+                            <div class="step-info"><h4>监控与运维体系</h4><p>AI 系统的可观测性、性能优化和持续改进</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">4</div>
+                            <div class="step-info"><h4>输出技术方案文档</h4><p>为你负责的 AI 项目撰写完整的技术架构文档</p></div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-num">5</div>
+                            <div class="step-info"><h4>内部分享与沉淀</h4><p>在智汇同行或 AI 夜校分享你的经验，贡献到知识库</p></div>
+                        </li>
+                    </ul>
+                    <div class="tip-box"><i class="fas fa-lightbulb"></i> 推荐资源：《Agent Skill：AI 的技能工具箱》+ 全球研报库深度报告</div>
+                </div>
+            </div>
+
+            <div class="milestone-box">
+                <h2><i class="fas fa-flag-checkered" style="color:#7C3AED;"></i> 完成高阶路径后，你能做到</h2>
+                <div class="milestone-grid">
+                    <div class="milestone-item">
+                        <i class="fas fa-sitemap"></i>
+                        <h4>架构设计</h4>
+                        <p>独立设计复杂 Agent 系统</p>
+                    </div>
+                    <div class="milestone-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>业务落地</h4>
+                        <p>主导 AI 项目从 0 到 1</p>
+                    </div>
+                    <div class="milestone-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>团队赋能</h4>
+                        <p>成为团队 AI 技术专家</p>
+                    </div>
+                    <div class="milestone-item">
+                        <i class="fas fa-pen-alt"></i>
+                        <h4>知识贡献</h4>
+                        <p>沉淀可复用的实战经验</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="finish-box">
+                <h3>🎉 恭喜！你已完成 AI 学习库全部路径</h3>
+                <p>从零基础到高阶专家，现在是时候把知识变成真正的业务价值了</p>
+                <a href="../index.html#cases" class="btn-white"><i class="fas fa-lightbulb"></i> 查看实战案例</a>
+                <a href="../index.html#learning" class="btn-white" style="color:#374151;">← 返回路径选择</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
