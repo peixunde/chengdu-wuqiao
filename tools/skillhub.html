@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillHub - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .tool-detail { padding: 2rem 0 4rem; }
+        .info-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .info-card h2 { font-size: 1.3rem; color: #1F2937; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .info-card h2 i { color: #7C3AED; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .feature-item { background: #F5F3FF; border: 1px solid #DDD6FE; border-radius: 12px; padding: 1.5rem; }
+        .feature-item i { font-size: 2rem; color: #7C3AED; margin-bottom: 0.75rem; display: block; }
+        .feature-item h3 { font-size: 1rem; color: #1F2937; margin-bottom: 0.5rem; }
+        .feature-item p { font-size: 0.9rem; color: #6B7280; }
+        .use-case { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #F3F4F6; }
+        .use-case:last-child { border-bottom: none; }
+        .use-case-icon { background: #EDE9FE; color: #7C3AED; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .use-case-info h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.25rem; }
+        .use-case-info p { font-size: 0.85rem; color: #6B7280; }
+        .cta-box { background: linear-gradient(135deg, #7C3AED, #2563EB); color: white; border-radius: 16px; padding: 2rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { margin-bottom: 0.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 1rem; }
+        .cta-box .btn { background: white; color: #7C3AED; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .capability-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
+        .capability-list li { display: flex; align-items: center; gap: 0.6rem; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.9rem; color: #374151; }
+        .capability-list li i { color: #7C3AED; flex-shrink: 0; }
+        .tag-badge { display: inline-flex; align-items: center; gap: 0.3rem; background: #EDE9FE; color: #6D28D9; border-radius: 20px; padding: 0.25rem 0.75rem; font-size: 0.8rem; font-weight: 500; margin: 0.2rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#tools">AI工具</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.5rem; opacity:0.8; font-size:0.9rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a> /
+                <a href="../index.html#tools" style="color:rgba(255,255,255,0.8);text-decoration:none;">AI工具</a> /
+                <span>SkillHub</span>
+            </div>
+            <h1><i class="fas fa-cubes"></i> SkillHub</h1>
+            <p>面向所有 Agent 用户的 Agent Skill 管理平台</p>
+        </div>
+    </div>
+
+    <div class="tool-detail">
+        <div class="container">
+
+            <!-- 工具介绍 -->
+            <div class="info-card">
+                <h2><i class="fas fa-info-circle"></i> 工具介绍</h2>
+                <p style="color:#374151; line-height:1.8; margin-bottom:1rem;">
+                    SkillHub 是面向所有使用 Agent 的用户的 <strong>Agent Skill 管理平台</strong>。
+                    参考开源 Skill 标准结构（agentskills），采用更强格式化的 UI 进行展示，新手上手成本更低。
+                </p>
+                <p style="color:#374151; line-height:1.8;">
+                    平台提供技能的全生命周期管理：从创建、编辑、版本管理，到导入导出与分发，
+                    让每位同学都能高效管理自己的 Agent 技能资产。
+                </p>
+                <div style="margin-top:1rem;">
+                    <span class="tag-badge"><i class="fas fa-users"></i> 全员适用</span>
+                    <span class="tag-badge"><i class="fas fa-robot"></i> Agent 技能</span>
+                    <span class="tag-badge"><i class="fas fa-code-branch"></i> 版本管理</span>
+                    <span class="tag-badge"><i class="fas fa-paint-brush"></i> 低门槛 UI</span>
+                </div>
+            </div>
+
+            <!-- 核心功能 -->
+            <div class="info-card">
+                <h2><i class="fas fa-star"></i> 核心功能</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>版本对比 & 回滚</h3>
+                        <p>查看不同版本间的差异，一键回滚到历史版本，安全迭代不怕出错</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-file-export"></i>
+                        <h3>技能导入导出</h3>
+                        <p>支持技能的批量导入导出，方便团队共享和迁移 Skill 资产</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-edit"></i>
+                        <h3>在线编辑</h3>
+                        <p>直接在平台内编辑 Skill 内容，无需本地环境，随时随地修改</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-th-large"></i>
+                        <h3>格式化 UI 展示</h3>
+                        <p>参考 agentskills 开源标准，更规范的结构化展示，新手也能快速上手</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 平台能力 -->
+            <div class="info-card">
+                <h2><i class="fas fa-list-check"></i> 平台能力清单</h2>
+                <ul class="capability-list">
+                    <li><i class="fas fa-check-circle"></i> Skill 创建与编辑</li>
+                    <li><i class="fas fa-check-circle"></i> 版本历史查看</li>
+                    <li><i class="fas fa-check-circle"></i> 版本差异对比</li>
+                    <li><i class="fas fa-check-circle"></i> 一键版本回滚</li>
+                    <li><i class="fas fa-check-circle"></i> Skill 批量导入</li>
+                    <li><i class="fas fa-check-circle"></i> Skill 批量导出</li>
+                    <li><i class="fas fa-check-circle"></i> 在线实时编辑</li>
+                    <li><i class="fas fa-check-circle"></i> 标准格式化展示</li>
+                    <li><i class="fas fa-check-circle"></i> 公共技能市场</li>
+                    <li><i class="fas fa-check-circle"></i> 团队技能共享</li>
+                </ul>
+            </div>
+
+            <!-- 适用场景 -->
+            <div class="info-card">
+                <h2><i class="fas fa-lightbulb"></i> 适用场景</h2>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-user-cog"></i></div>
+                    <div class="use-case-info">
+                        <h4>个人 Skill 资产管理</h4>
+                        <p>统一管理自己积累的 Prompt / Skill，有版本记录，随时可回溯</p>
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="use-case-info">
+                        <h4>团队技能共建共享</h4>
+                        <p>将团队沉淀的优质 Skill 统一入库，方便全员复用，避免重复造轮子</p>
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div class="use-case-info">
+                        <h4>Skill 迭代与版本控制</h4>
+                        <p>记录每次修改，出现问题快速回滚，像代码一样管理 AI 技能</p>
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="use-case-info">
+                        <h4>跨平台技能迁移</h4>
+                        <p>导出 Skill 在不同平台间迁移，或与外部团队交换优质技能</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h3>开始使用 SkillHub</h3>
+                <p>管理你的 Agent Skill，提升 AI 应用效率</p>
+                <a href="https://skills.corp.kuaishou.com/skills?domainId=public" target="_blank" class="btn">🚀 立即使用（内网）</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
