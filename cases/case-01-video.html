@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大模型在视频举证判断上的应用分享 - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #1E3A5F 0%, #7C3AED 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 1.8rem; margin-bottom: 0.5rem; line-height: 1.4; }
+        .page-hero p { opacity: 0.9; }
+        .case-detail { padding: 2rem 0 4rem; }
+        .info-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .info-card h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; }
+        .info-card h2 i { color: #7C3AED; }
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .meta-item { background: #F9FAFB; border-radius: 10px; padding: 1rem; text-align: center; }
+        .meta-item i { font-size: 1.4rem; color: #7C3AED; margin-bottom: 0.4rem; display: block; }
+        .meta-item .label { font-size: 0.78rem; color: #888; }
+        .meta-item .value { font-weight: 600; color: #1F2937; font-size: 0.9rem; }
+        .outline-list { list-style: none; }
+        .outline-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 1rem 0; border-bottom: 1px solid #F3F4F6; }
+        .outline-item:last-child { border-bottom: none; }
+        .outline-num { background: linear-gradient(135deg, #1E3A5F, #7C3AED); color: white; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; font-weight: 600; }
+        .outline-info h4 { font-size: 1rem; color: #1F2937; margin-bottom: 0.2rem; }
+        .outline-info p { font-size: 0.85rem; color: #6B7280; }
+        .resource-box { display: flex; flex-direction: column; gap: 1rem; }
+        .resource-btn { display: flex; align-items: center; gap: 1rem; background: #F9FAFB; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.25rem 1.5rem; text-decoration: none; color: #1F2937; transition: all 0.3s; }
+        .resource-btn:hover { border-color: #7C3AED; background: #F5F3FF; }
+        .resource-btn .icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .resource-btn .icon.purple { background: #F3E8FF; color: #7C3AED; }
+        .resource-btn .icon.blue { background: #DBEAFE; color: #2563EB; }
+        .resource-btn .icon.gray { background: #F3F4F6; color: #6B7280; }
+        .resource-btn .text h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.15rem; }
+        .resource-btn .text p { font-size: 0.82rem; color: #6B7280; }
+        .resource-btn .arrow { margin-left: auto; color: #9CA3AF; }
+        .takeaway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .takeaway-item { background: linear-gradient(135deg, #F5F3FF, #EFF6FF); border-radius: 12px; padding: 1.25rem; }
+        .takeaway-item i { font-size: 1.6rem; color: #7C3AED; margin-bottom: 0.5rem; display: block; }
+        .takeaway-item h4 { font-size: 0.9rem; color: #1F2937; font-weight: 600; }
+        .series-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.82rem; margin-bottom: 0.75rem; }
+        .nav-bottom { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: opacity 0.3s; }
+        .nav-btn.back { background: #F3F4F6; color: #374151; }
+        .nav-btn.back:hover { background: #E5E7EB; }
+        .nav-btn.next { background: #6B7280; color: white; cursor: default; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#cases">实战经验</a></li>
+                <li><a href="../index.html#courses">课程资源</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.75rem; opacity:0.8; font-size:0.85rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a>
+                / <a href="../index.html#cases" style="color:rgba(255,255,255,0.8);text-decoration:none;">AI实战经验</a>
+                / <span>第一期</span>
+            </div>
+            <div class="series-badge"><i class="fas fa-flag"></i> 实战经验第一期</div>
+            <h1><i class="fas fa-video"></i> 大模型在视频举证判断上的应用分享</h1>
+            <p>AI 领航员计划 · 用户服务中心 · 2026年3月</p>
+        </div>
+    </div>
+
+    <div class="case-detail">
+        <div class="container">
+
+            <!-- 基本信息 -->
+            <div class="info-card">
+                <h2><i class="fas fa-info-circle"></i> 分享概览</h2>
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <i class="fas fa-layer-group"></i>
+                        <div class="label">所属系列</div>
+                        <div class="value">AI 领航员计划</div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <div class="label">分享时间</div>
+                        <div class="value">2026年3月20日</div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-bullseye"></i>
+                        <div class="label">业务场景</div>
+                        <div class="value">视频举证判断</div>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-microchip"></i>
+                        <div class="label">核心技术</div>
+                        <div class="value">多模态大模型</div>
+                    </div>
+                </div>
+                <p style="color:#374151; line-height:1.8;">
+                    本次分享聚焦于大模型（视频识别模型）在电商纠纷视频举证场景中的实际应用，
+                    从模型核心特点介绍、如何精准拆解自身业务需求，到结果不符预期时的问题定位方法，
+                    提供了一套完整可复用的实践经验。
+                </p>
+            </div>
+
+            <!-- 分享大纲 -->
+            <div class="info-card">
+                <h2><i class="fas fa-list-ul"></i> 分享大纲</h2>
+                <ul class="outline-list">
+                    <li class="outline-item">
+                        <div class="outline-num">01</div>
+                        <div class="outline-info">
+                            <h4>视频识别模型介绍 &amp; 实测核心特点</h4>
+                            <p>介绍当前主流视频识别大模型的能力范围，通过实测案例揭示模型的核心优势与局限性</p>
+                        </div>
+                    </li>
+                    <li class="outline-item">
+                        <div class="outline-num">02</div>
+                        <div class="outline-info">
+                            <h4>模型使用过程中如何精准拆解自身需求</h4>
+                            <p>从业务场景出发，学习将模糊需求拆解为可执行的模型任务，提升 Prompt 的针对性和准确度</p>
+                        </div>
+                    </li>
+                    <li class="outline-item">
+                        <div class="outline-num">03</div>
+                        <div class="outline-info">
+                            <h4>结果不符预期时如何快速定位问题源头</h4>
+                            <p>构建系统化的问题排查框架：数据问题、Prompt 问题、模型能力边界问题的区分与处理方法</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 学习收获 -->
+            <div class="info-card">
+                <h2><i class="fas fa-star"></i> 学习收获</h2>
+                <div class="takeaway-grid">
+                    <div class="takeaway-item">
+                        <i class="fas fa-video"></i>
+                        <h4>了解视频识别模型的真实能力边界</h4>
+                    </div>
+                    <div class="takeaway-item">
+                        <i class="fas fa-cut"></i>
+                        <h4>掌握需求拆解的实用方法论</h4>
+                    </div>
+                    <div class="takeaway-item">
+                        <i class="fas fa-search"></i>
+                        <h4>建立 AI 结果问题排查思维</h4>
+                    </div>
+                    <div class="takeaway-item">
+                        <i class="fas fa-copy"></i>
+                        <h4>获取可复用的 Prompt 模板</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 资料获取 -->
+            <div class="info-card">
+                <h2><i class="fas fa-folder-open"></i> 相关资料</h2>
+                <div class="resource-box">
+                    <a href="https://docs.corp.kuaishou.com/d/home/fcADYPCc9VIPraGzeUcB0r8sg" target="_blank" class="resource-btn">
+                        <div class="icon purple"><i class="fas fa-file-alt"></i></div>
+                        <div class="text">
+                            <h4>分享文档</h4>
+                            <p>完整的分享资料，含案例截图、Prompt 模板、方法论总结</p>
+                        </div>
+                        <div class="arrow"><i class="fas fa-external-link-alt"></i></div>
+                    </a>
+                    <a href="https://docs.corp.kuaishou.com/file/fcAAKhbG3zj_QWT_fup1BuYsq" target="_blank" class="resource-btn">
+                        <div class="icon blue"><i class="fas fa-video"></i></div>
+                        <div class="text">
+                            <h4>会议录屏</h4>
+                            <p>Kim Meeting_20260320_用户服务中心AI领航员计划的会议 · 需登录内网账号查看 · 如无权限请联系培训运营组</p>
+                        </div>
+                        <div class="arrow"><i class="fas fa-external-link-alt"></i></div>
+                    </a>
+                </div>
+                <p style="margin-top:1rem; font-size:0.85rem; color:#9CA3AF;">
+                    <i class="fas fa-lock" style="margin-right:0.3rem;"></i>
+                    以上资料为快手内网资源，需在公司网络环境下访问
+                </p>
+            </div>
+
+            <!-- 底部导航 -->
+            <div class="nav-bottom">
+                <a href="../index.html#cases" class="nav-btn back">
+                    <i class="fas fa-arrow-left"></i> 返回实战经验
+                </a>
+                <span style="color:#9CA3AF; font-size:0.85rem;">第二期内容持续更新中...</span>
+                <a href="case-02-html.html" class="nav-btn prev" style="background:linear-gradient(135deg,#0F766E,#6366F1);">
+                    第二期 <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
