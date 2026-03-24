@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luigi - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .tool-detail { padding: 2rem 0 4rem; }
+        .info-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .info-card h2 { font-size: 1.3rem; color: #1F2937; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .info-card h2 i { color: #7C3AED; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .feature-item { background: #F3E8FF; border: 1px solid #DDD6FE; border-radius: 12px; padding: 1.5rem; }
+        .feature-item i { font-size: 2rem; color: #7C3AED; margin-bottom: 0.75rem; display: block; }
+        .feature-item h3 { font-size: 1rem; color: #1F2937; margin-bottom: 0.5rem; }
+        .feature-item p { font-size: 0.9rem; color: #6B7280; }
+        .channel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+        .channel-item { background: #F9FAFB; border-radius: 12px; padding: 1.25rem; text-align: center; border: 2px solid #E5E7EB; transition: border-color 0.3s; }
+        .channel-item:hover { border-color: #7C3AED; }
+        .channel-item i { font-size: 1.8rem; color: #7C3AED; margin-bottom: 0.5rem; display: block; }
+        .channel-item span { font-size: 0.9rem; color: #374151; font-weight: 500; }
+        .use-case { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #F3F4F6; }
+        .use-case:last-child { border-bottom: none; }
+        .use-case-icon { background: #F3E8FF; color: #7C3AED; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .use-case-info h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.25rem; }
+        .use-case-info p { font-size: 0.85rem; color: #6B7280; }
+        .cta-box { background: linear-gradient(135deg, #7C3AED, #2563EB); color: white; border-radius: 16px; padding: 2rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { margin-bottom: 0.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 1rem; }
+        .cta-box .btn { background: white; color: #7C3AED; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#tools">AI工具</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.5rem; opacity:0.8; font-size:0.9rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a> / <a href="../index.html#tools" style="color:rgba(255,255,255,0.8);text-decoration:none;">AI工具</a> / <span>Luigi</span>
+            </div>
+            <h1><i class="fas fa-palette"></i> Luigi</h1>
+            <p>零代码 / 低代码 AI Agent 应用开发平台 · 无代码快速构建 Agent</p>
+        </div>
+    </div>
+
+    <div class="tool-detail">
+        <div class="container">
+            <div class="info-card">
+                <h2><i class="fas fa-info-circle"></i> 工具介绍</h2>
+                <p style="color:#374151; line-height:1.8;">Luigi 是快手内部的 AI Agent 应用开发平台，支持无代码可视化构建 Agent，帮助业务团队在不依赖研发资源的情况下快速搭建和部署 AI 应用。无论是简单的问答机器人还是复杂的多步骤自动化工作流，Luigi 都能轻松实现。</p>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-star"></i> 核心功能</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>可视化开发</h3>
+                        <p>拖拽式界面，图形化配置工作流，无需编写代码</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cubes"></i>
+                        <h3>丰富组件库</h3>
+                        <p>大量预置组件，覆盖数据处理、API 调用、逻辑判断等场景</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h3>多渠道发布</h3>
+                        <p>一次构建，多渠道发布，灵活触达用户</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>数据监控</h3>
+                        <p>实时监控 Agent 运行状态，及时发现和处理问题</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-share-alt"></i> 支持发布渠道</h2>
+                <div class="channel-grid">
+                    <div class="channel-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Web 页面</span>
+                    </div>
+                    <div class="channel-item">
+                        <i class="fas fa-comments"></i>
+                        <span>Kim 机器人</span>
+                    </div>
+                    <div class="channel-item">
+                        <i class="fas fa-code"></i>
+                        <span>API 接口</span>
+                    </div>
+                    <div class="channel-item">
+                        <i class="fas fa-window-maximize"></i>
+                        <span>iframe 嵌入</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-lightbulb"></i> 典型应用案例</h2>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-headset"></i></div>
+                    <div class="use-case-info"><h4>智能客服机器人</h4><p>接入知识库，自动回答用户常见问题，24 小时不间断服务</p></div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-search"></i></div>
+                    <div class="use-case-info"><h4>内容审核助手</h4><p>自动化内容审核流程，提高审核效率和一致性</p></div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="use-case-info"><h4>业务流程自动化</h4><p>将重复性工作自动化，释放人力专注更高价值的工作</p></div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="use-case-info"><h4>数据分析报告</h4><p>定时拉取数据，自动生成分析报告并推送给相关人员</p></div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>Hi Luigi！开始构建你的第一个 Agent</h3>
+                <p>无代码搭建，快速上线，让 AI 真正为业务服务</p>
+                <a href="https://luigi.corp.kuaishou.com/" target="_blank" class="btn" style="margin-right:0.5rem;">🚀 立即使用</a>
+                <a href="https://docs.corp.kuaishou.com/k/home/VTEgbXCLvVf8/fcABpAoceMNOmpZ5dgeBaTpnX" target="_blank" class="btn">📖 Hi！我是 Luigi</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
