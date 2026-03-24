@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI好厉害 期刊 - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .mag-detail { padding: 2rem 0 4rem; }
+        .intro-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .intro-card h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1rem; }
+        .section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .section-item { background: linear-gradient(135deg, #F3E8FF, #FCE7F3); border-radius: 12px; padding: 1.25rem; text-align: center; }
+        .section-item i { font-size: 1.8rem; color: #7C3AED; margin-bottom: 0.5rem; display: block; }
+        .section-item h4 { font-size: 0.9rem; color: #1F2937; }
+        .issue-list { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .issue-list h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1.5rem; }
+        .issue-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.25rem; border: 1px solid #E5E7EB; border-radius: 12px; margin-bottom: 1rem; transition: box-shadow 0.3s; }
+        .issue-item:hover { box-shadow: 0 4px 12px rgba(124,58,237,0.1); border-color: #DDD6FE; }
+        .issue-num { background: linear-gradient(135deg, #7C3AED, #EC4899); color: white; width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0; }
+        .issue-info { flex: 1; }
+        .issue-info h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.25rem; }
+        .issue-info .meta { font-size: 0.82rem; color: #9CA3AF; margin-bottom: 0.4rem; }
+        .issue-info p { font-size: 0.85rem; color: #6B7280; }
+        .tag { display: inline-block; background: #F3E8FF; color: #7C3AED; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; margin-right: 0.3rem; }
+        .subscribe-box { background: linear-gradient(135deg, #7C3AED, #EC4899); color: white; border-radius: 16px; padding: 2rem; text-align: center; }
+        .subscribe-box h3 { margin-bottom: 0.5rem; }
+        .subscribe-box p { opacity: 0.9; margin-bottom: 1rem; }
+        .subscribe-box .btn { background: white; color: #7C3AED; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#news">资讯动态</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.5rem; opacity:0.8; font-size:0.9rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a> / <a href="../index.html#news" style="color:rgba(255,255,255,0.8);text-decoration:none;">资讯动态</a> / <span>AI好厉害</span>
+            </div>
+            <h1><i class="fas fa-book-reader"></i> AI好厉害 · 期刊</h1>
+            <p>每周三更新 · 模型动态 + 行业热点 + KOL精选 + AI出海</p>
+        </div>
+    </div>
+
+    <div class="mag-detail">
+        <div class="container">
+            <div class="intro-card">
+                <h2><i class="fas fa-info-circle" style="color:#7C3AED;"></i> 关于《AI好厉害》</h2>
+                <p style="color:#374151; line-height:1.8; margin-bottom:1.5rem;">《AI好厉害》是AI 主题周刊，每周三准时更新。每期精心整理一周内最值得关注的 AI 动态，并附上编辑解读，帮助你在信息爆炸的时代把握最核心的 AI 脉搏。</p>
+                <div class="section-grid">
+                    <div class="section-item">
+                        <i class="fas fa-microchip"></i>
+                        <h4>模型动态</h4>
+                    </div>
+                    <div class="section-item">
+                        <i class="fas fa-fire"></i>
+                        <h4>行业热点</h4>
+                    </div>
+                    <div class="section-item">
+                        <i class="fas fa-star"></i>
+                        <h4>KOL精选</h4>
+                    </div>
+                    <div class="section-item">
+                        <i class="fas fa-globe"></i>
+                        <h4>AI出海</h4>
+                    </div>
+                    <div class="section-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>工具推荐</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="issue-list">
+                <h2><i class="fas fa-list" style="color:#7C3AED;"></i> 往期回顾</h2>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcADilMpQx6nTfY0mklAinxBg" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">07</div>
+                    <div class="issue-info">
+                        <h4>第七期 · 新增养虾专区 🦞</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>AI模型动态 / AI行业热点 / KOL精选 / AI出海</p>
+                        <div style="margin-top:0.5rem;"><span class="tag">最新</span><span class="tag">养虾专区</span></div>
+                    </div>
+                </a>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcAAGosB7SK_sK_ggFdFVkQq9" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">06</div>
+                    <div class="issue-info">
+                        <h4>第六期 · 网罗春节 AI 热点资讯 👏</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>春节期间 AI 动态 / 新鲜出炉</p>
+                        <div style="margin-top:0.5rem;"><span class="tag">春节特刊</span></div>
+                    </div>
+                </a>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcABvhrwpygaFnpfNNT9ta5gi" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">05</div>
+                    <div class="issue-info">
+                        <h4>第五期</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>AI模型动态 / AI行业热点 / KOL精选 / AI出海</p>
+                    </div>
+                </a>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcACDc7k4E23GDNa-HfiC3Si8" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">04</div>
+                    <div class="issue-info">
+                        <h4>第四期</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>AI模型动态 / AI行业热点 / KOL精选 / AI出海</p>
+                    </div>
+                </a>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcADA2pqpLTexIWCFyRLe7JqR" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">03</div>
+                    <div class="issue-info">
+                        <h4>第三期</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>AI模型动态 / AI行业热点 / KOL精选 / AI出海</p>
+                    </div>
+                </a>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcACmCwHIi8VnbFtXxDkeyztn" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">02</div>
+                    <div class="issue-info">
+                        <h4>第二期</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>AI模型动态 / AI行业热点 / KOL精选 / AI出海</p>
+                    </div>
+                </a>
+
+                <a href="https://docs.corp.kuaishou.com/d/home/fcADExsxVEFBiUBueyFI9Q4Ie" target="_blank" class="issue-item" style="text-decoration:none;display:flex;">
+                    <div class="issue-num">01</div>
+                    <div class="issue-info">
+                        <h4>第一期 · 创刊号</h4>
+                        <div class="meta"><i class="fas fa-external-link-alt"></i> 点击查看完整期刊</div>
+                        <p>《AI好厉害》创刊号 / 2026 年 AI 趋势展望</p>
+                        <div style="margin-top:0.5rem;"><span class="tag">创刊号</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="subscribe-box">
+                <h3><i class="fas fa-bell"></i> 订阅《AI好厉害》周刊</h3>
+                <p>每周三准时收到最新期刊</p>
+                <a href="../index.html#news" class="btn">← 返回资讯列表</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
