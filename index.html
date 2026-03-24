@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户服务中心AI应用学习库</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI学习</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#courses">AI课程</a></li>
+                <li><a href="#tools">AI工具</a></li>
+                <li><a href="#news">AI资讯动态</a></li>
+                <li><a href="#cases">AI实战经验</a></li>
+
+            </ul>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main>
+        <!-- 首页英雄区 -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <i class="fas fa-robot"></i>
+                        用户服务中心AI应用学习库
+                    </h1>
+                    <p class="hero-subtitle">拥抱AI，学以致用</p>
+                    <p class="hero-description">
+                        用户体验部-用户服务中心为全员打造的 AI 学习专区，旨在帮助每一位同学从零基础稳步起步，通过系统化的学习路径与真实的内部案例，循序渐进地掌握 AI 实用技能，赋能业务提效。
+                    </p>
+                    <div class="hero-feature-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin:1.5rem 0;text-align:left;">
+                        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:1rem;text-align:center;">
+                            <div style="font-size:1.8rem;margin-bottom:0.5rem;">📚</div>
+                            <div style="font-weight:600;margin-bottom:0.4rem;">AI 课程</div>
+                            <div style="font-size:0.82rem;opacity:0.85;">体系化视频教程，构建完整 AI 知识框架</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:1rem;text-align:center;">
+                            <div style="font-size:1.8rem;margin-bottom:0.5rem;">🛠️</div>
+                            <div style="font-weight:600;margin-bottom:0.4rem;">AI 工具</div>
+                            <div style="font-size:0.82rem;opacity:0.85;">内部常用工具汇集，使用指南一站直达</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:1rem;text-align:center;">
+                            <div style="font-size:1.8rem;margin-bottom:0.5rem;">💡</div>
+                            <div style="font-weight:600;margin-bottom:0.4rem;">AI 实践</div>
+                            <div style="font-size:0.82rem;opacity:0.85;">真实案例拆解，学习成果转化为生产力</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:1rem;text-align:center;">
+                            <div style="font-size:1.8rem;margin-bottom:0.5rem;">📡</div>
+                            <div style="font-weight:600;margin-bottom:0.4rem;">AI 资讯</div>
+                            <div style="font-size:0.82rem;opacity:0.85;">前沿动态与技术趋势，保持敏锐洞察</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> 开始学习
+                        </a>
+                        <a href="#courses" class="btn btn-secondary">
+                            <i class="fas fa-book"></i> 浏览课程
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 快速导航 -->
+        <section class="quick-nav">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-compass"></i>
+                    内容导航
+                </h2>
+                <div class="nav-grid">
+                    <a href="#courses" class="nav-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>AI课程</h3>
+                        <p>公司级课程、部门级课程，系统化学习AI知识</p>
+                    </a>
+                    <a href="#tools" class="nav-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>AI工具</h3>
+                        <p>Mario Claw、Luigi、Klaw、Langbridge Claw 工具追踪</p>
+                    </a>
+                    <a href="#news" class="nav-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>AI资讯动态</h3>
+                        <p>AI日报、《AI好厉害》周刊、全球研报库</p>
+                    </a>
+                    <a href="#cases" class="nav-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>AI实战经验</h3>
+                        <p>团队内工具探索、提示词工程、业务落地、避坑指南</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 课程资源 -->
+        <section id="courses" class="content-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-book-open"></i>
+                    课程资源
+                </h2>
+                <div class="course-tabs">
+                    <button class="tab-btn active" data-tab="company">公司级课程</button>
+                    <button class="tab-btn" data-tab="department">部门级课程</button>
+                </div>
+                <div class="tab-content">
+                    <div id="company" class="tab-pane active">
+                        <div class="course-grid">
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>OpenClaw 从入门到实战</h3>
+                                <p>系统讲解 AI 大模型的基础知识、核心原理与落地实践</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock"></i> 1小时</span>
+                                    <span><i class="fas fa-star"></i> 零基础友好</span>
+                                </div>
+                                <a href="courses/company-level.html" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>AI 夜校系列课程</h3>
+                                <p>大模型、Prompt工程、Agent、多模态等核心技术</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock"></i> 7-8小时</span>
+                                    <span><i class="fas fa-star"></i> 系统化</span>
+                                </div>
+                                <a href="courses/company-level.html#ai-night-school" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3>OpenClaw 核心概念</h3>
+                                <p>深入讲解 OpenClaw 的核心概念和实际应用</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock"></i> 1小时</span>
+                                    <span><i class="fas fa-star"></i> 实操导向</span>
+                                </div>
+                                <a href="courses/company-level.html#openclaw-guide" class="course-link">查看详情 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="department" class="tab-pane">
+                        <div class="course-grid">
+                            <div class="course-card featured">
+                                <div class="featured-badge">专属</div>
+                                <div class="course-icon" style="background:linear-gradient(135deg,#0F766E,#0EA5E9);">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>拥抱AI · 智见未来</h3>
+                                <p>为客服伙伴打造的在线学习专区，涵盖AI基础、智能客服应用及工具使用等实用课程</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-users"></i> 客服专属</span>
+                                    <span><i class="fas fa-graduation-cap"></i> 快手中学</span>
+                                </div>
+                                <a href="courses/department-level.html#ai-future" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card featured">
+                                <div class="featured-badge">最新</div>
+                                <div class="course-icon">
+                                    <i class="fas fa-toolbox"></i>
+                                </div>
+                                <h3>Agent Skill：AI 的技能工具箱</h3>
+                                <p>覆盖完整研发链路，从想法到上线的完整路径</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-user"></i> 章程</span>
+                                    <span><i class="fas fa-calendar"></i> 2026年2月</span>
+                                </div>
+                                <a href="courses/department-level.html" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <h3>多模态大模型落地实践</h3>
+                                <p>电商纠纷判证场景的实际应用案例</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-user"></i> 章程</span>
+                                    <span><i class="fas fa-calendar"></i> 2025年12月</span>
+                                </div>
+                                <a href="courses/department-level.html#multimodal" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3>AI Coding 应用与概述</h3>
+                                <p>全面介绍 AI Coding 工具的应用场景和使用技巧</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-user"></i> 肖宝秋</span>
+                                    <span><i class="fas fa-calendar"></i> 2025年11月</span>
+                                </div>
+                                <a href="courses/department-level.html#ai-coding" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h3>视频举证判证</h3>
+                                <p>电商纠纷判证场景的多模态大模型落地实践</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-user"></i> 章程</span>
+                                    <span><i class="fas fa-calendar"></i> 2025年12月</span>
+                                </div>
+                                <a href="courses/department-level.html#multimodal" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3>买家托管机器人</h3>
+                                <p>智能客服场景的 Agent 自动化处理实践</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-user"></i> 彭程</span>
+                                    <span><i class="fas fa-calendar"></i> 2025年10月</span>
+                                </div>
+                                <a href="courses/department-level.html#customer-service" class="course-link">查看详情 →</a>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>RAG 智慧导航</h3>
+                                <p>客服问题处理的 RAG 技术应用实践</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-user"></i> 彭程</span>
+                                    <span><i class="fas fa-calendar"></i> 2025年10月</span>
+                                </div>
+                                <a href="courses/department-level.html#customer-service" class="course-link">查看详情 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI工具平台 -->
+        <section id="tools" class="content-section bg-light">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-wrench"></i>
+                    AI工具平台
+                </h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <i class="fas fa-magic tool-icon"></i>
+                            <h3>Mario Claw</h3>
+                        </div>
+                        <p class="tool-desc">基于OpenClaw的AI办公应用，表达需求即可自动处理</p>
+                        <ul class="tool-features">
+                            <li><i class="fas fa-check"></i> 智能对话</li>
+                            <li><i class="fas fa-check"></i> 多智能体协作</li>
+                            <li><i class="fas fa-check"></i> 办公场景集成</li>
+                        </ul>
+                        <a href="tools/mario-claw.html" class="btn btn-tool">了解更多 →</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <i class="fas fa-server tool-icon"></i>
+                            <h3>Langbridge Claw</h3>
+                        </div>
+                        <p class="tool-desc">独立的OpenClaw Bot运行环境，让智能助手构建丝滑高效</p>
+                        <ul class="tool-features">
+                            <li><i class="fas fa-check"></i> 独立运行环境</li>
+                            <li><i class="fas fa-check"></i> 技能市场</li>
+                            <li><i class="fas fa-check"></i> 多渠道接入</li>
+                        </ul>
+                        <a href="tools/langbridge-claw.html" class="btn btn-tool">了解更多 →</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <i class="fas fa-shield-alt tool-icon"></i>
+                            <h3>Klaw</h3>
+                        </div>
+                        <p class="tool-desc">本地运行的个人AI助理，数据更安全，响应更快速</p>
+                        <ul class="tool-features">
+                            <li><i class="fas fa-check"></i> 本地部署</li>
+                            <li><i class="fas fa-check"></i> 办公集成</li>
+                            <li><i class="fas fa-check"></i> 高度可定制</li>
+                        </ul>
+                        <a href="tools/klaw.html" class="btn btn-tool">了解更多 →</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <i class="fas fa-palette tool-icon"></i>
+                            <h3>Luigi</h3>
+                        </div>
+                        <p class="tool-desc">零代码/低代码AI Agent应用开发平台</p>
+                        <ul class="tool-features">
+                            <li><i class="fas fa-check"></i> 可视化开发</li>
+                            <li><i class="fas fa-check"></i> 丰富组件库</li>
+                            <li><i class="fas fa-check"></i> 多渠道发布</li>
+                        </ul>
+                        <a href="tools/luigi.html" class="btn btn-tool">了解更多 →</a>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <i class="fas fa-cubes tool-icon"></i>
+                            <h3>SkillHub</h3>
+                        </div>
+                        <p class="tool-desc">面向所有 Agent 用户的 Skill 管理平台，参考开源标准结构</p>
+                        <ul class="tool-features">
+                            <li><i class="fas fa-check"></i> 版本对比 & 回滚</li>
+                            <li><i class="fas fa-check"></i> 技能导入导出</li>
+                            <li><i class="fas fa-check"></i> 在线编辑</li>
+                        </ul>
+                        <a href="tools/skillhub.html" class="btn btn-tool">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资讯动态 -->
+        <section id="news" class="content-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-newspaper"></i>
+                    资讯动态
+                </h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-badge daily">每日更新</div>
+                        <i class="fas fa-rss news-icon"></i>
+                        <h3>AI News</h3>
+                        <p>每日更新AI动向，包含AI观察点和行业动态追踪</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-clock"></i> 每日10:00更新</span>
+                        </div>
+                        <a href="news/ai-news.html" class="news-link">阅读最新资讯 →</a>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-badge weekly">每周更新</div>
+                        <i class="fas fa-book-reader news-icon"></i>
+                        <h3>AI好厉害期刊</h3>
+                        <p>系统梳理全球AI动态，包含模型动态、行业热点、精选内容</p>
+                        <div class="news-meta">
+                            <span><i class="fas fa-calendar"></i> 每周三更新</span>
+                        </div>
+                        <a href="news/ai-magazine.html" class="news-link">阅读最新期刊 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AI实战经验 -->
+        <section id="cases" class="content-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    AI实战经验
+                </h2>
+                <p class="section-subtitle">内部真实案例，可直接借鉴落地</p>
+                <div class="course-grid">
+                    <div class="course-card featured">
+                        <div class="featured-badge">第一期</div>
+                        <div class="course-icon"><i class="fas fa-video"></i></div>
+                        <h3>大模型在视频举证判断上的应用分享</h3>
+                        <p>视频识别模型介绍 &amp; 实测核心特点，精准拆解需求，快速定位问题源头</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-calendar"></i> 2026年3月</span>
+                            <span><i class="fas fa-users"></i> AI领航员计划</span>
+                        </div>
+                        <a href="cases/case-01-video.html" class="course-link">查看详情 →</a>
+                    </div>
+                    <div class="course-card">
+                        <div class="featured-badge" style="background:linear-gradient(135deg,#0F766E,#6366F1);">第二期</div>
+                        <div class="course-icon" style="background:linear-gradient(135deg,#0F766E,#6366F1);"><i class="fas fa-code"></i></div>
+                        <h3>大模型生成HTML汇报材料 — 从"无脑用"到"懂原理"</h3>
+                        <p>揭秘底层逻辑，掌握颜色、布局、框架调优能力，真正掌控 AI 生成内容质量</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-calendar"></i> 2026年</span>
+                            <span><i class="fas fa-users"></i> AI领航员计划</span>
+                        </div>
+                        <a href="cases/case-02-html.html" class="course-link">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 快速开始 -->
+        <section class="cta-section">
+            <div class="container">
+                <h2><i class="fas fa-flag-checkered"></i> 准备好开始了吗？</h2>
+                <p>选择适合你的学习路径，开启AI学习之旅</p>
+                <div class="cta-buttons">
+                    <a href="#courses" class="btn btn-cta-primary">
+                        <i class="fas fa-play"></i> 开始学习
+                    </a>
+                    <a href="#courses" class="btn btn-cta-secondary">
+                        <i class="fas fa-book"></i> 浏览所有课程
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> AI学习</h3>
+                    <p>拥抱AI，学以致用</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                        用户体验部-用户服务中心 打造
+                    </p>
+                </div>
+                <div class="footer-section">
+
+                </div>
+                <div class="footer-section">
+                    <h4>内容资源</h4>
+                    <ul>
+                        <li><a href="#courses">课程资源</a></li>
+                        <li><a href="#tools">AI工具</a></li>
+                        <li><a href="#news">资讯动态</a></li>
+                        <li><a href="#cases">实战案例</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>参与贡献</h4>
+                    <ul>
+                        <li><a href="#community">加入社区</a></li>
+                        <li><a href="#community">分享案例</a></li>
+                        <li><a href="#community">评论互动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI智能应用学习库 v1.0.0 | 让 AI 学习变得轻松有趣，让 AI 应用真正落地 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
