@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Claw - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .tool-detail { padding: 2rem 0 4rem; }
+        .info-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .info-card h2 { font-size: 1.3rem; color: #1F2937; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .info-card h2 i { color: #F59E0B; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .feature-item { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 12px; padding: 1.5rem; }
+        .feature-item i { font-size: 2rem; color: #F59E0B; margin-bottom: 0.75rem; display: block; }
+        .feature-item h3 { font-size: 1rem; color: #1F2937; margin-bottom: 0.5rem; }
+        .feature-item p { font-size: 0.9rem; color: #6B7280; }
+        .use-case { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #F3F4F6; }
+        .use-case:last-child { border-bottom: none; }
+        .use-case-icon { background: #FEF3C7; color: #F59E0B; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .use-case-info h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.25rem; }
+        .use-case-info p { font-size: 0.85rem; color: #6B7280; }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #F59E0B; color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; }
+        .back-btn:hover { background: #D97706; }
+        .cta-box { background: linear-gradient(135deg, #F59E0B, #EF4444); color: white; border-radius: 16px; padding: 2rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { margin-bottom: 0.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 1rem; }
+        .cta-box .btn { background: white; color: #F59E0B; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#tools">AI工具</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.5rem; opacity:0.8; font-size:0.9rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a> / <a href="../index.html#tools" style="color:rgba(255,255,255,0.8);text-decoration:none;">AI工具</a> / <span>Mario Claw</span>
+            </div>
+            <h1><i class="fas fa-magic"></i> Mario Claw</h1>
+            <p>基于 OpenClaw 的 AI 办公助手 · 一句话处理需求 · 🦞 一键领龙虾</p>
+        </div>
+    </div>
+
+    <div class="tool-detail">
+        <div class="container">
+            <div class="info-card">
+                <h2><i class="fas fa-info-circle"></i> 工具介绍</h2>
+                <p style="color:#374151; line-height:1.8;">Mario Claw 是基于 OpenClaw 和多智能体架构打造的 AI 办公应用。只需用自然语言表达你的需求，Mario Claw 会自动拆解任务、调用合适的工具、协调多个 Agent 协同完成，大幅降低使用门槛，让每个人都能轻松驾驭 AI。</p>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-star"></i> 核心功能</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>智能对话</h3>
+                        <p>自然语言交互，无需学习特定指令，直接说出你的需求</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>多智能体协作</h3>
+                        <p>多个 Agent 分工合作，自动完成复杂的多步骤任务</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>办公场景集成</h3>
+                        <p>无缝接入快手内部办公系统，处理日常工作事项</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>一键执行</h3>
+                        <p>复杂需求一句话搞定，极大提升工作效率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2><i class="fas fa-lightbulb"></i> 适用场景</h2>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-file-word"></i></div>
+                    <div class="use-case-info"><h4>文档处理</h4><p>自动撰写报告、整理会议纪要、生成 PPT 大纲</p></div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="use-case-info"><h4>数据分析</h4><p>上传数据文件，自动分析并生成可视化报表</p></div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-search"></i></div>
+                    <div class="use-case-info"><h4>信息检索</h4><p>快速检索内部知识库，获取准确的业务信息</p></div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="use-case-info"><h4>任务自动化</h4><p>定时执行重复性工作，解放双手专注创造性工作</p></div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>🦞 立即体验 Mario Claw · 一键领龙虾</h3>
+                <p>一句话搞定复杂需求，开启 AI 办公新体验</p>
+                <a href="https://mario.corp.kuaishou.com/claw" target="_blank" class="btn" style="margin-right:0.5rem;">🚀 立即使用</a>
+                <a href="https://docs.corp.kuaishou.com/d/home/fcACBFh0Bfk358fWrjnwtTidx" target="_blank" class="btn">📖 使用手册</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
