@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司级课程 - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .page-hero p { opacity: 0.9; }
+        .breadcrumb { padding: 1rem 0; font-size: 0.9rem; color: #888; }
+        .breadcrumb a { color: #4F46E5; text-decoration: none; }
+        .course-detail { padding: 2rem 0 4rem; }
+        .course-section { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 2.5rem; overflow: hidden; }
+        .course-section-header { background: linear-gradient(135deg, #4F46E5, #06B6D4); color: white; padding: 1.5rem 2rem; }
+        .course-section-header h2 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+        .course-section-header p { opacity: 0.9; font-size: 0.95rem; }
+        .course-section-body { padding: 2rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .info-item { background: #F9FAFB; border-radius: 8px; padding: 1rem; text-align: center; }
+        .info-item i { font-size: 1.4rem; color: #4F46E5; margin-bottom: 0.4rem; display: block; }
+        .info-item .label { font-size: 0.8rem; color: #888; }
+        .info-item .value { font-weight: 600; color: #1F2937; }
+        .chapter-list { list-style: none; }
+        .chapter-list li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid #F3F4F6; }
+        .chapter-list li:last-child { border-bottom: none; }
+        .chapter-num { background: #4F46E5; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; font-weight: 600; }
+        .chapter-info h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.2rem; }
+        .chapter-info p { font-size: 0.85rem; color: #6B7280; }
+        .tag { display: inline-block; background: #EEF2FF; color: #4F46E5; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.78rem; margin-right: 0.4rem; }
+        .tag.green { background: #ECFDF5; color: #10B981; }
+        .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #4F46E5; color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.3s; }
+        .back-btn:hover { background: #4338CA; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#courses">课程资源</a></li>
+                <li><a href="../index.html#tools">AI工具</a></li>
+                <li><a href="../index.html#news">资讯动态</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div class="breadcrumb" style="color:rgba(255,255,255,0.7); margin-bottom:0.5rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);">首页</a> / <span>公司级课程</span>
+            </div>
+            <h1><i class="fas fa-graduation-cap"></i> 公司级课程</h1>
+            <p>快手中学精品课程 · 系统化 AI 学习体系</p>
+        </div>
+    </div>
+
+    <div class="course-detail">
+        <div class="container">
+
+            <!-- OpenClaw 从入门到实战 -->
+            <div class="course-section" id="openclaw">
+                <div class="course-section-header">
+                    <h2><i class="fas fa-rocket"></i> OpenClaw 从入门到实战</h2>
+                    <p>快手中学 · 零基础系统讲解，内容由浅入深</p>
+                </div>
+                <div class="course-section-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <div class="label">适合人群</div>
+                            <div class="value">零基础学习者</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="label">课程时长</div>
+                            <div class="value">8-10 小时</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-signal"></i>
+                            <div class="label">难度</div>
+                            <div class="value">⭐⭐</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-signs"></i>
+                            <div class="label">来源</div>
+                            <div class="value">快手中学</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom:1.2rem; color:#374151;">本课程系统介绍 OpenClaw 平台的使用方法和 AI 大模型的基础应用，从零基础出发，帮助学员快速掌握 AI 工具的核心能力。</p>
+                    <ul class="chapter-list">
+                        <li><div class="chapter-num">1</div><div class="chapter-info"><h4>OpenClaw 是什么？</h4><p>平台介绍与核心能力概览</p></div></li>
+                        <li><div class="chapter-num">2</div><div class="chapter-info"><h4>大模型基础知识</h4><p>LLM 原理、能力与局限性</p></div></li>
+                        <li><div class="chapter-num">3</div><div class="chapter-info"><h4>提示词工程入门</h4><p>如何写出高质量的 Prompt</p></div></li>
+                        <li><div class="chapter-num">4</div><div class="chapter-info"><h4>OpenClaw 实战操作</h4><p>对话、文档处理、工作流配置</p></div></li>
+                        <li><div class="chapter-num">5</div><div class="chapter-info"><h4>常见业务场景应用</h4><p>客服、内容生产、数据分析等场景</p></div></li>
+                    </ul>
+                    <div style="margin-top:1.5rem;">
+                        <span class="tag">零基础友好</span>
+                        <span class="tag">快手中学</span>
+                        <span class="tag green">推荐入门</span>
+                    </div>
+                    <div style="margin-top:1rem;">
+                        <a href="https://school.corp.kuaishou.com/school/web/play/KC20267654#from=begin" target="_blank" class="back-btn" style="font-size:0.9rem;"><i class="fas fa-play"></i> 立即学习</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI 夜校系列 -->
+            <div class="course-section" id="ai-night-school">
+                <div class="course-section-header">
+                    <h2><i class="fas fa-moon"></i> 拥抱全天候数字员工 · AI 夜校系列</h2>
+                    <p>快手 AI 夜校 · 大模型、Prompt、Agent、多模态全覆盖</p>
+                </div>
+                <div class="course-section-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <div class="label">适合人群</div>
+                            <div class="value">想了解全貌</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="label">课程时长</div>
+                            <div class="value">15-20 小时</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-signal"></i>
+                            <div class="label">难度</div>
+                            <div class="value">⭐⭐⭐</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-layer-group"></i>
+                            <div class="label">模块数</div>
+                            <div class="value">6 大模块</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom:1.2rem; color:#374151;">全面覆盖 AI 技术栈的综合课程，从大模型原理到 Agent 开发，从 Prompt 工程到多模态应用，帮助学员建立完整的 AI 知识体系。</p>
+                    <ul class="chapter-list">
+                        <li><div class="chapter-num">1</div><div class="chapter-info"><h4><a href="https://docs.corp.kuaishou.com/k/home/VFGyNlzyhn50/fcACmc929hsJGWcjWckWBuRUM" target="_blank" style="color:inherit;"></a>大模型的前世今生</a></h4><p>从 GPT 到国产大模型，技术演进与能力边界</p></div></li>
+                        <li><div class="chapter-num">2</div><div class="chapter-info"><h4><a href="https://docs.corp.kuaishou.com/k/home/VVKqJC4tKrKY/fcADajGzYrJrOhSnjvNAQ5Flt" target="_blank" style="color:inherit;">提示词工程（Prompt）-设计模式 💡</a></h4><p>CoT、Few-shot、角色扮演等高阶技巧</p></div></li>
+                        <li><div class="chapter-num">3</div><div class="chapter-info"><h4><a href="https://docs.corp.kuaishou.com/k/home/VQsdzOzj171I/fcABrSieDXm0T6MMb1Ro11r8R" target="_blank" style="color:inherit;">智能体（Agent）🚀</a></h4><p>ReAct 框架、工具调用、自动化流程</p></div></li>
+                        <li><div class="chapter-num">4</div><div class="chapter-info"><h4><a href="https://docs.corp.kuaishou.com/k/home/VTltJGw5TPvI/fcAB2u7TvntgrfF4IjAwBWaPy" target="_blank" style="color:inherit;">语言模型 🦊</a></h4><p>图像理解、视频分析、跨模态交互</p></div></li>
+                        <li><div class="chapter-num">5</div><div class="chapter-info"><h4><a href="https://docs.corp.kuaishou.com/k/home/VQ8r2LcI_44Y/fcACwAcmvxYkg5k6rrzQvDyXZ" target="_blank" style="color:inherit;">多模态 🌈</a></h4><p>检索增强生成原理与企业落地</p></div></li>
+                        <li><div class="chapter-num">6</div><div class="chapter-info"><h4><a href="https://docs.corp.kuaishou.com/k/home/VOerFyE1RPK4/fcACizwCWWYgu9nYa9_uIM33L" target="_blank" style="color:inherit;">AI工具实践教程</a></h4><p>如何将 AI 能力转化为业务价值</p></div></li>
+                    </ul>
+                    <div style="margin-top:1.5rem;">
+                        <span class="tag">系统化</span>
+                        <span class="tag">AI 夜校</span>
+                        <span class="tag green">全栈覆盖</span>
+                    </div>
+                    <div style="margin-top:1rem;">
+                        <a href="https://school.corp.kuaishou.com/school/web/play/KC20256854#section=22587" target="_blank" class="back-btn" style="font-size:0.9rem;"><i class="fas fa-play"></i> 立即学习</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OpenClaw 核心概念 -->
+            <div class="course-section" id="openclaw-guide">
+                <div class="course-section-header">
+                    <h2><i class="fas fa-book"></i> OpenClaw 核心概念精讲</h2>
+                    <p>深入理解 OpenClaw 的架构设计与核心能力</p>
+                </div>
+                <div class="course-section-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <div class="label">适合人群</div>
+                            <div class="value">有基础的学员</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="label">课程时长</div>
+                            <div class="value">5-6 小时</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-signal"></i>
+                            <div class="label">难度</div>
+                            <div class="value">⭐⭐⭐</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-cogs"></i>
+                            <div class="label">侧重</div>
+                            <div class="value">实操导向</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom:1.2rem; color:#374151;">深入讲解 OpenClaw 的工作流引擎、插件机制、多 Agent 协作等核心概念，适合已有使用基础、希望深入理解平台能力的学员。</p>
+                    <ul class="chapter-list">
+                        <li><div class="chapter-num">1</div><div class="chapter-info"><h4>OpenClaw 架构解析</h4><p>平台设计理念与技术架构</p></div></li>
+                        <li><div class="chapter-num">2</div><div class="chapter-info"><h4>工作流引擎深度使用</h4><p>条件分支、循环、并行节点配置</p></div></li>
+                        <li><div class="chapter-num">3</div><div class="chapter-info"><h4>插件与工具集成</h4><p>内置插件使用 + 自定义工具开发</p></div></li>
+                        <li><div class="chapter-num">4</div><div class="chapter-info"><h4>多 Agent 协作模式</h4><p>编排多个 Agent 协同完成复杂任务</p></div></li>
+                    </ul>
+                    <div style="margin-top:1.5rem;">
+                        <span class="tag">实操导向</span>
+                        <span class="tag">深度解析</span>
+                    </div>
+                    <div style="margin-top:1rem;">
+                        <a href="https://school.corp.kuaishou.com/school/web/play/KC20257264#section=26665" target="_blank" class="back-btn" style="font-size:0.9rem;"><i class="fas fa-play"></i> 立即学习</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="../index.html#courses" class="back-btn"><i class="fas fa-arrow-left"></i> 返回课程列表</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
