@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News 日报 - AI智能应用学习库</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%); color: white; padding: 3rem 0; }
+        .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .news-detail { padding: 2rem 0 4rem; }
+        .news-intro { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .news-intro h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1rem; }
+        .section-list { list-style: none; }
+        .section-list li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid #F3F4F6; }
+        .section-list li:last-child { border-bottom: none; }
+        .section-icon { background: linear-gradient(135deg, #0F172A, #1E3A5F); color: white; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.85rem; }
+        .section-info h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.2rem; }
+        .section-info p { font-size: 0.85rem; color: #6B7280; }
+        .recent-news { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .recent-news h2 { font-size: 1.2rem; color: #1F2937; margin-bottom: 1.5rem; }
+        .news-item { border-left: 3px solid #4F46E5; padding: 1rem 1rem 1rem 1.25rem; margin-bottom: 1rem; background: #F9FAFB; border-radius: 0 8px 8px 0; }
+        .news-item .date { font-size: 0.8rem; color: #9CA3AF; margin-bottom: 0.25rem; }
+        .news-item h4 { font-size: 0.95rem; color: #1F2937; margin-bottom: 0.25rem; }
+        .news-item p { font-size: 0.85rem; color: #6B7280; }
+        .tag-row { margin-top: 0.5rem; }
+        .tag { display: inline-block; background: #EEF2FF; color: #4F46E5; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; margin-right: 0.3rem; }
+        .update-notice { background: linear-gradient(135deg, #0F172A, #1E3A5F); color: white; border-radius: 16px; padding: 2rem; text-align: center; }
+        .update-notice h3 { margin-bottom: 0.5rem; }
+        .update-notice p { opacity: 0.85; margin-bottom: 1rem; }
+        .update-notice .btn { background: white; color: #0F172A; padding: 0.6rem 1.4rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand" style="color:white;text-decoration:none;">
+                <i class="fas fa-brain"></i><span>AI学习</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#news">资讯动态</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <div class="container">
+            <div style="margin-bottom:0.5rem; opacity:0.8; font-size:0.9rem;">
+                <a href="../index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;">首页</a> / <a href="../index.html#news" style="color:rgba(255,255,255,0.8);text-decoration:none;">资讯动态</a> / <span>AI News</span>
+            </div>
+            <h1><i class="fas fa-rss"></i> AI News 日报</h1>
+            <p>每日更新 · AI 观察点 + 行业动态追踪 · 每日 10:00 准时推送</p>
+        </div>
+    </div>
+
+    <div class="news-detail">
+        <div class="container">
+            <div class="news-intro">
+                <h2><i class="fas fa-info-circle" style="color:#4F46E5;"></i> 关于 AI News</h2>
+                <p style="color:#374151; line-height:1.8; margin-bottom:1.25rem;">AI News 是由 AI Bot 自动生成的每日资讯，每天 10:00 准时更新，追踪全球 AI 领域最新动态，帮助你用最短时间了解最重要的 AI 信息。</p>
+                <ul class="section-list">
+                    <li>
+                        <div class="section-icon"><i class="fas fa-eye"></i></div>
+                        <div class="section-info"><h4>AI 观察点</h4><p>每日精选 3-5 条最值得关注的 AI 动向，附简评</p></div>
+                    </li>
+                    <li>
+                        <div class="section-icon"><i class="fas fa-industry"></i></div>
+                        <div class="section-info"><h4>行业动态追踪</h4><p>重点跟踪 OpenAI、Anthropic、Google、百度、阿里等头部公司动态</p></div>
+                    </li>
+                    <li>
+                        <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="section-info"><h4>技术进展</h4><p>最新模型发布、技术突破、研究论文速读</p></div>
+                    </li>
+                    <li>
+                        <div class="section-icon"><i class="fas fa-building"></i></div>
+                        <div class="section-info"><h4>业务落地案例</h4><p>国内外企业 AI 落地最新实践，可借鉴、可学习</p></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="recent-news">
+                <h2><i class="fas fa-clock" style="color:#4F46E5;"></i> 近期精彩内容</h2>
+
+                <div class="news-item">
+                    <div class="date">2026-03-24</div>
+                    <h4>具身智能赛道进入规模化盈利期，宇树科技毛利率近 60% 冲刺 IPO</h4>
+                    <p>宇树科技 IPO 招股书披露，2025 年前三季度整体毛利率达 59.5%，人形机器人出货量超 5500 台居全球第一；36 氪报告显示 2026 年国内具身智能市场规模有望突破万亿元关口。</p>
+                    <div class="tag-row">
+                        <span class="tag">具身智能</span>
+                        <span class="tag">机器人</span>
+                        <span class="tag">IPO</span>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="date">2026-03-24</div>
+                    <h4>Meta 扎克伯格开发 CEO Agent，AI 渗透企业核心决策层</h4>
+                    <p>Meta 全公司将 AI 工具使用纳入员工绩效评分；AI 博士生开源的多 Agent 人生托管系统爆火，可自动完成笔记整理、会议转录等全流程事务。AI Agent 从执行层工具渗透到决策层管理环节。</p>
+                    <div class="tag-row">
+                        <span class="tag">AI Agent</span>
+                        <span class="tag">Meta</span>
+                        <span class="tag">企业管理</span>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="date">2026-03-24</div>
+                    <h4>百度智能云上线国内首个企业级 DuMate，支持本地部署解决 AI 安全风险</h4>
+                    <p>国内首个国产企业级满血版 DuMate 全量上线，支持本地部署，通过安全沙箱、授权管控等多重防护解决 AI 安全风险，原生支持 Word、Excel、PPT 等主流办公软件。</p>
+                    <div class="tag-row">
+                        <span class="tag">百度</span>
+                        <span class="tag">企业 AI</span>
+                        <span class="tag">安全合规</span>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="date">2026-03-24</div>
+                    <h4>中国大模型周调用量连续两周超美国，MiniMax M2.5 五周蝉联全球冠军</h4>
+                    <p>OpenRouter 数据：中国 AI 大模型周调用量达 4.69 万亿 Token，全球调用量前三均为中国模型。MiniMax M2.5 连续五周位居全球大模型调用量冠军，海外同能力模型价格约为其十几倍。</p>
+                    <div class="tag-row">
+                        <span class="tag">大模型</span>
+                        <span class="tag">国产 AI</span>
+                        <span class="tag">MiniMax</span>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="date">2026-03-24</div>
+                    <h4>马斯克开建 Terafab 芯片工厂，年产能达 1 太瓦算力</h4>
+                    <p>特斯拉、SpaceX、xAI 联合在奥斯汀开建 TERAFAB 芯片工厂，投资 200-250 亿美元，生产 2nm 芯片。AI 巨头从"租用算力"转向"自建产能"，彻底摆脱对台积电、三星的依赖。</p>
+                    <div class="tag-row">
+                        <span class="tag">算力</span>
+                        <span class="tag">马斯克</span>
+                        <span class="tag">芯片</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="update-notice">
+                <h3><i class="fas fa-bell"></i> 订阅 AI News 日报</h3>
+                <p>每天 10:00 准时收到最新 AI 资讯</p>
+                <a href="https://docs.corp.kuaishou.com/d/home/fcABJ9T4vXww_pr7taLhSY6V8" target="_blank" class="btn" style="margin-right:0.5rem;">📖 查看 AI News</a>
+                <a href="../index.html#news" class="btn">← 返回资讯列表</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
