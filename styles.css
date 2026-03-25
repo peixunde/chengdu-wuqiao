@@ -453,9 +453,9 @@ body {
     border-radius: 16px;
     box-shadow: var(--shadow);
     transition: all 0.3s;
+    border: none;
     background: white;
     border: 2px solid var(--border-color);
-    color: var(--text-color);
 }
 
 .tool-card:hover {
@@ -464,23 +464,7 @@ body {
     border-color: var(--secondary-color);
 }
 
-.tool-card-1, .tool-card-2, .tool-card-3, .tool-card-4, .tool-card-5 {
-    background: white;
-    color: var(--text-color);
-}
-
-.tool-card .tool-icon { color: var(--secondary-color); }
-.tool-card .tool-header h3 { color: var(--dark-color); font-size: 1.2rem; }
-.tool-card .tool-desc { color: var(--text-color); }
-.tool-card .tool-features li { color: var(--text-color); }
-.tool-card .tool-features i { color: var(--success-color); }
-.tool-card .btn-tool {
-    background: var(--secondary-color);
-    color: white;
-    border: none;
-    margin-top: auto;
-}
-.tool-card .btn-tool:hover { background: var(--primary-color); }
+.tool-card-1, .tool-card-2, .tool-card-3, .tool-card-4, .tool-card-5 { background: white; }
 
 .tool-header {
     display: flex;
