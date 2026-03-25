@@ -449,19 +449,37 @@ body {
     min-height: 320px;
     display: flex;
     flex-direction: column;
-    background: white;
-    padding: 1.25rem;
-    border-radius: 12px;
+    padding: 1.5rem;
+    border-radius: 16px;
     box-shadow: var(--shadow);
     transition: all 0.3s;
-    border: 2px solid transparent;
+    border: none;
+    color: white;
 }
 
 .tool-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--secondary-color);
 }
+
+.tool-card-1 { background: linear-gradient(135deg, #4F46E5, #7C3AED); }
+.tool-card-2 { background: linear-gradient(135deg, #0891B2, #06B6D4); }
+.tool-card-3 { background: linear-gradient(135deg, #059669, #10B981); }
+.tool-card-4 { background: linear-gradient(135deg, #D97706, #F59E0B); }
+.tool-card-5 { background: linear-gradient(135deg, #DC2626, #F43F5E); }
+
+.tool-card .tool-icon { color: rgba(255,255,255,0.9); }
+.tool-card .tool-header h3 { color: white; font-size: 1.2rem; }
+.tool-card .tool-desc { color: rgba(255,255,255,0.88); }
+.tool-card .tool-features li { color: rgba(255,255,255,0.88); }
+.tool-card .tool-features i { color: rgba(255,255,255,0.9); }
+.tool-card .btn-tool {
+    background: rgba(255,255,255,0.25);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    margin-top: auto;
+}
+.tool-card .btn-tool:hover { background: rgba(255,255,255,0.4); }
 
 .tool-header {
     display: flex;
