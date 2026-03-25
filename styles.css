@@ -440,14 +440,17 @@ body {
 /* 工具卡片 */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
     margin-top: 2rem;
 }
 
 .tool-card {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
     background: white;
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: all 0.3s;
