@@ -379,7 +379,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 用户服务中心 AI学习库. 持续更新中...</p>
+                <p>&copy; 2025 用户服务中心 AI学习库. 持续更新中...</p>
             </div>
         </div>
     </footer>
@@ -423,6 +423,20 @@
         if (toggle) {
             toggle.addEventListener('click', () => menu.classList.toggle('active'));
         }
+
+        // 卡片点击跳转
+        document.querySelectorAll('.course-card, .tool-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e) {
+                // 如果点击的是链接本身，不阻止默认行为
+                if (e.target.tagName === 'A' || e.target.closest('a')) return;
+                
+                const link = this.querySelector('a.course-link');
+                if (link) {
+                    window.location.href = link.getAttribute('href');
+                }
+            });
+        });
     </script>
 </body>
 </html>
