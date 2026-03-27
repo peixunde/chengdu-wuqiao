@@ -8,6 +8,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- 内网访问检测 -->
+    <div id="intranet-check" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);z-index:9999;justify-content:center;align-items:center;color:white;text-align:center;padding:2rem;">
+        <div style="max-width:500px;">
+            <i class="fas fa-shield-alt" style="font-size:4rem;margin-bottom:1.5rem;opacity:0.9;"></i>
+            <h2 style="font-size:2rem;margin-bottom:1rem;">🏢 内网专属资源</h2>
+            <p style="font-size:1.1rem;opacity:0.9;margin-bottom:1.5rem;">
+                本网站为快手内部资源，需要在公司内网或 VPN 环境下访问。
+            </p>
+            <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;text-align:left;">
+                <p style="margin-bottom:0.5rem;"><i class="fas fa-wifi" style="margin-right:0.5rem;"></i> 请确保已连接公司 WiFi</p>
+                <p style="margin-bottom:0.5rem;"><i class="fas fa-network-wired" style="margin-right:0.5rem;"></i> 或已连接 VPN</p>
+                <p style="opacity:0.8;font-size:0.9rem;margin-top:1rem;">如有问题，请联系用户服务中心-培训运营组</p>
+            </div>
+            <button onclick="location.reload()" style="background:white;color:#764ba2;border:none;padding:0.8rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fas fa-redo" style="margin-right:0.5rem;"></i> 重新检测
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 内网检测：尝试访问快手内部域名
+        (function() {
+            const intranetCheck = document.getElementById('intranet-check');
+            
+            // 尝试访问快手内网图片资源（这个地址只有内网能访问）
+            const testImg = new Image();
+            let isIntranet = false;
+            
+            // 设置超时
+            const timeout = setTimeout(() => {
+                if (!isIntranet) {
+                    // 显示内网提示
+                    intranetCheck.style.display = 'flex';
+                    // 隐藏主要内容
+                    document.querySelector('nav').style.display = 'none';
+                    document.querySelector('main').style.display = 'none';
+                    document.querySelector('footer').style.display = 'none';
+                }
+            }, 2000);
+            
+            // 使用快手logo作为检测（内网环境下加载更快）
+            testImg.onload = function() {
+                isIntranet = true;
+                clearTimeout(timeout);
+            };
+            
+            testImg.onerror = function() {
+                // 加载失败，可能是外网
+            };
+            
+            // 尝试加载快手内网资源（带随机数防止缓存）
+            testImg.src = 'https://sso.corp.kuaishou.com/favicon.ico?_t=' + Date.now();
+        })();
+    </script>
+
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
