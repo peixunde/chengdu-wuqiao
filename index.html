@@ -8,70 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 内网访问提示（默认隐藏，外网显示） -->
-    <div id="intranet-check" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);z-index:9999;justify-content:center;align-items:center;color:white;text-align:center;padding:2rem;">
-        <div style="max-width:500px;">
-            <i class="fas fa-shield-alt" style="font-size:4rem;margin-bottom:1.5rem;opacity:0.9;"></i>
-            <h2 style="font-size:2rem;margin-bottom:1rem;">🏢 内网专属资源</h2>
-            <p style="font-size:1.1rem;opacity:0.9;margin-bottom:1.5rem;">
-                本网站为快手内部资源，需要在公司内网或 VPN 环境下访问。
-            </p>
-            <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;text-align:left;">
-                <p style="margin-bottom:0.5rem;"><i class="fas fa-wifi" style="margin-right:0.5rem;"></i> 请确保已连接公司 WiFi</p>
-                <p style="margin-bottom:0.5rem;"><i class="fas fa-network-wired" style="margin-right:0.5rem;"></i> 或已连接 VPN</p>
-                <p style="opacity:0.8;font-size:0.9rem;margin-top:1rem;">如有问题，请联系用户服务中心-培训运营组</p>
-            </div>
-            <button onclick="location.reload()" style="background:white;color:#764ba2;border:none;padding:0.8rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="fas fa-redo" style="margin-right:0.5rem;"></i> 重新检测
-            </button>
-        </div>
+    <!-- 内网环境提示条（外网显示，内网隐藏） -->
+    <div id="network-hint" style="display:none;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-align:center;padding:0.75rem;font-size:0.9rem;position:sticky;top:0;z-index:1001;">
+        <i class="fas fa-info-circle" style="margin-right:0.5rem;"></i>
+        🏢 您当前处于外网环境，部分内网资源可能无法访问
     </div>
 
     <script>
-        // 内网检测：使用 fetch 检测内网可达性
+        // 检测网络环境（仅显示提示，不阻止访问）
         (function() {
-            const intranetCheck = document.getElementById('intranet-check');
-            let checkCompleted = false;
+            const hint = document.getElementById('network-hint');
             
-            // 显示内网提示的函数
-            function showIntranetWarning() {
-                if (checkCompleted) return;
-                checkCompleted = true;
-                intranetCheck.style.display = 'flex';
-                document.querySelector('nav').style.display = 'none';
-                document.querySelector('main').style.display = 'none';
-                document.querySelector('footer').style.display = 'none';
-            }
+            // 尝试访问内网资源
+            const img = new Image();
+            let isIntranet = false;
             
-            // 隐藏提示（正常显示页面）
-            function hideIntranetWarning() {
-                if (checkCompleted) return;
-                checkCompleted = true;
-                // 保持隐藏状态，正常显示页面
-            }
+            img.onload = function() {
+                isIntranet = true;
+                // 内网环境，保持提示隐藏
+            };
             
-            // 使用 fetch 检测内网（更可靠）
-            fetch('https://docs.corp.kuaishou.com/favicon.ico', {
-                method: 'HEAD',
-                mode: 'no-cors',
-                cache: 'no-cache'
-            })
-            .then(() => {
-                // 请求成功（即使是opaque响应），说明内网可达
-                hideIntranetWarning();
-            })
-            .catch(() => {
-                // 请求失败，可能是外网
-                showIntranetWarning();
-            });
+            img.onerror = function() {
+                // 外网环境，显示提示
+                if (hint) hint.style.display = 'block';
+            };
             
-            // 备用：超时检测（3秒后如果还没完成，默认显示页面）
+            // 使用快手内网图片检测（带时间戳防缓存）
+            img.src = 'https://static.corp.kuaishou.com/favicon.ico?_t=' + Date.now();
+            
+            // 2秒后如果还没加载成功，默认显示提示
             setTimeout(() => {
-                if (!checkCompleted) {
-                    checkCompleted = true;
-                    // 超时默认显示页面（避免误判）
+                if (!isIntranet && hint) {
+                    hint.style.display = 'block';
                 }
-            }, 3000);
+            }, 2000);
         })();
     </script>
 
